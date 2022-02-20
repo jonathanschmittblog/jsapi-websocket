@@ -1,4 +1,4 @@
-# JSAPI | Modelo de client websocket Go (Gin, Gorila) + RabbitMQ
+# JSAPI | Modelo de client websocket Go (Gin, Gorilla Websocket) + RabbitMQ
 
 Olá, seja bem-vindo a minha API Go.
 
