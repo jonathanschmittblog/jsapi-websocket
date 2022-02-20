@@ -1,5 +1,7 @@
 # JSAPI | Client websocket Go (Gin, Gorila) + RabbitMQ
 
+Olá, seja bem-vindo a minha API Go.
+
 Esta aplicação depende do outro projeto (jsapi) para exibir as mensagens.
 - https://github.com/jonathanschmittblog/jsapi
 
