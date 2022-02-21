@@ -2,11 +2,11 @@ package main
 
 import (
 	"jsapi-websocket/routers"
-	"jsapi-websocket/wsservers"
+	"jsapi-websocket/servers"
 )
 
 func main() {
-	wsServer, err := wsservers.New()
+	wsServer, err := servers.New()
 	if err != nil {
 		println("Não foi possível iniciar o servidor." + err.Error())
 		return

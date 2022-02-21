@@ -1,4 +1,4 @@
-package wsservers
+package servers
 
 import (
 	"os"

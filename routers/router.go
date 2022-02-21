@@ -1,13 +1,13 @@
 package routers
 
 import (
-	"jsapi-websocket/wsservers"
+	"jsapi-websocket/servers"
 
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 )
 
-func ApplyAccountRoutes(wsServer *wsservers.Server) {
+func ApplyAccountRoutes(wsServer *servers.Server) {
 	wsServer.Router.GET("/messages", messages)
 	// Configura o arquivo html como página inicial
 	wsServer.Router.Use(static.Serve("/", static.LocalFile("./public", true)))
