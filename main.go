@@ -2,13 +2,13 @@ package main
 
 import (
 	"jsapi-websocket/routers"
-	"jsapi-websocket/servers"
+	"jsapi-websocket/wsservers"
 )
 
 func main() {
-	wsServer, err := servers.New()
+	wsServer, err := wsservers.New()
 	if err != nil {
-		println("Não foi possível iniciar o servidor.")
+		println("Não foi possível iniciar o servidor." + err.Error())
 		return
 	}
 	routers.ApplyAccountRoutes(wsServer)
