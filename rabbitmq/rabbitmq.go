@@ -26,7 +26,7 @@ func New(nome string) *RabbitMq {
 }
 
 func (r *RabbitMq) connect() {
-	conn, err := amqp.Dial(os.Getenv("JSAPI_RABBITMQ_DIAL"))
+	conn, err := amqp.Dial(os.Getenv("JSAPIWS_RABBITMQ_DIAL"))
 	utils.FailOnError(err, "Falha ao conectar no servidor RabbitMQ.")
 	r.Connection = conn
 }
