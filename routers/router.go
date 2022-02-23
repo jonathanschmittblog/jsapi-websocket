@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func ApplyAccountRoutes(wsServer *servers.Server) {
+func ApplyRoutes(wsServer *servers.Server) {
 	wsServer.Router.GET("/messages", messages)
 	// Configura o arquivo html como página inicial
 	wsServer.Router.Use(static.Serve("/", static.LocalFile("./public", true)))

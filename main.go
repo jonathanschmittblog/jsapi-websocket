@@ -11,6 +11,6 @@ func main() {
 		println("Não foi possível iniciar o servidor." + err.Error())
 		return
 	}
-	routers.ApplyAccountRoutes(wsServer)
+	routers.ApplyRoutes(wsServer)
 	wsServer.Start()
 }
