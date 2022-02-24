@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"jsapi-websocket/servers"
+	"github.com/jonathanschmittblog/jsapi-websocket/servers"
 
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"

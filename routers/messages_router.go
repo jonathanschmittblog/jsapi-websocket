@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"jsapi-websocket/rabbitmq"
+	"github.com/jonathanschmittblog/jsapi-websocket/rabbitmq"
 	"log"
 	"net/http"
 
