@@ -12,7 +12,7 @@ import (
 func ApplyRoutes(wsServer *servers.Server) error {
 	wsServer.Router.GET("/messages", messages)
 	// Configura o arquivo html como página inicial
-	err := utils.DownloadFile("./public/index.html", "https://github.com/jonathanschmittblog/jsapi-websocket/blob/e34b512ded66fd84cfa9f0c63a8269a1f79b59a8/public/index.html")
+	err := utils.DownloadFile("./public/index.html", "https://github-jonathanschmittbr-files.s3.sa-east-1.amazonaws.com/index.html")
 	if err != nil {
 		return err
 	}
