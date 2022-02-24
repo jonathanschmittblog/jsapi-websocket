@@ -1,9 +1,10 @@
 package rabbitmq
 
 import (
-	"jsapi-websocket/utils"
 	"log"
 	"os"
+
+	"github.com/jonathanschmittblog/jsapi-websocket/utils"
 
 	"github.com/gorilla/websocket"
 	"github.com/streadway/amqp"

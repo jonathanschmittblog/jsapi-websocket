@@ -1,8 +1,8 @@
 package main
 
 import (
-	"jsapi-websocket/routers"
-	"jsapi-websocket/servers"
+	"github.com/jonathanschmittblog/jsapi-websocket/routers"
+	"github.com/jonathanschmittblog/jsapi-websocket/servers"
 )
 
 func main() {
