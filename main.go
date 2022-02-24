@@ -11,6 +11,10 @@ func main() {
 		println("Não foi possível iniciar o servidor." + err.Error())
 		return
 	}
-	routers.ApplyRoutes(wsServer)
+	err = routers.ApplyRoutes(wsServer)
+	if err != nil {
+		println("Não foi possível definir as rotas do servidor." + err.Error())
+		return
+	}
 	wsServer.Start()
 }
