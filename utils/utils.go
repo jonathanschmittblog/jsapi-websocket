@@ -20,7 +20,7 @@ func FailOnError(err error, msg string) {
 	}
 }
 
-func DownloadFile(filepath string, url string) (err error) {
+func DownloadFile(filepath string, url string) error {
 	// Cria o arquivo
 	out, err := os.Create(filepath)
 	if err != nil  {
