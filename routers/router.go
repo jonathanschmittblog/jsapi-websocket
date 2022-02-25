@@ -1,8 +1,9 @@
 package routers
 
 import (
-	"jsapi-websocket/utils"
 	"os"
+
+	"github.com/jonathanschmittblog/jsapi-websocket/utils"
 
 	"github.com/jonathanschmittblog/jsapi-websocket/servers"
 
