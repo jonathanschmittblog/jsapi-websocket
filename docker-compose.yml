@@ -1,15 +1,27 @@
 version: "3.9"
 services:
-  jsapi-ws:
-    container_name: websocket
+  rabbitmq:
+    container_name: rabbitmq-1
+    image: "rabbitmq:3-management"
+    environment:
+      RABBITMQ_DEFAULT_USER: "jsuser"
+      RABBITMQ_DEFAULT_PASS: "jspass"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  jsapi-websocket:
+    container_name: jsapi-websocket-1
+    depends_on:
+      - rabbitmq
     build:
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile_ws
       context: .
-      target: dev
+    command: jsapi-websocket
     volumes:
-      - .:/opt/app/ws
+      - .:/go/src/jsapi-websocket
     environment:
       JSAPIWS_PORT: "3001"
-      JSAPIWS_RABBITMQ_DIAL: "amqp://jsuser:jspass@localhost:5672/"
+      JSAPIWS_RABBITMQ_DIAL: "amqp://jsuser:jspass@rabbitmq:5672/"
     ports:
       - "3001:3001"
